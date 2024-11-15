@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+int main() 
+{
+    cout << "Все возможные трехзначные коды\n";
+    
+    for (int i = 0; i <= 9; ++i) {
+        for (int j = 0; j <= 9; ++j) {
+            for (int k = 0; k <= 9; ++k) {
+                if (i != j && j != k && i != k) {
+                    cout << i << j << k << endl;
+                }
+            }
+        }
+    }
+
+    int combinations = 0;
+    for (int i = 0; i <= 9; ++i) {
+        for (int j = 0; j <= 9; ++j) {
+            for (int k = 0; k <= 9; ++k) {
+                if (i != j && j != k && i != k) {
+                    combinations++;
+                }
+            }
+        }
+    }
+
+
+    int timePerCombination = 3; 
+    int totalTime = combinations * timePerCombination;
+
+    cout << "Общее количество комбинаций: " << combinations << endl;
+    cout << "Время на открытие чемодана в худшем случае: " 
+              << totalTime / 60 << " минут " 
+              << totalTime % 60 << " секунд." << endl;
+
+    return 0;
+}
