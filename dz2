@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N; 
+    cout << "Введите количество дней: ";
+    cin >> N;
+
+    int totalDistance = 0;
+    int dailyDistance = 15;
+
+    for (int day = 1; day <= N; ++day) {
+        totalDistance += dailyDistance;
+        dailyDistance += 2; 
+    }
+
+    cout << "Общее расстояние за " << N << " дней: " << totalDistance << " см." << endl;
+
+    return 0;
+}
