@@ -5,16 +5,16 @@ int main() {
     cout << "Простые числа от 2 до 1000\n";
 
     for (int num = 2; num <= 1000; ++num) {
-        bool isPrime = true; 
+        bool is = true; 
 
         for (int i = 2; i * i <= num; ++i) { 
             if (num % i == 0) {
-                isPrime = false; 
+                is = false; 
                 break; 
             }
         }
 
-        if (isPrime) {
+        if (is) {
             cout << num << " "; 
         }
     }
