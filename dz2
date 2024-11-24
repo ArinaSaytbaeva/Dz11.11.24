@@ -6,15 +6,15 @@ int main() {
     cout << "Введите количество дней: ";
     cin >> N;
 
-    int totalDistance = 0;
-    int dailyDistance = 15;
+    int Dist = 0;
+    int EDist = 15;
 
     for (int day = 1; day <= N; ++day) {
-        totalDistance += dailyDistance;
-        dailyDistance += 2; 
+        Dist += 2;
+        EDist += 2; 
     }
 
-    cout << "Общее расстояние за " << N << " дней: " << totalDistance << " см." << endl;
+    cout<<"Общее расстояние за "<< N <<" дней "<< Dist <<"см"<<endl;
 
     return 0;
 }
