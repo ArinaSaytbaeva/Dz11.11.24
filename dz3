@@ -2,7 +2,7 @@
 using namespace std;
 int main() 
 {
-    cout << "Все возможные трехзначные коды\n";
+    cout << "Все трехзначные коды\n";
     
     for (int i = 0; i <= 9; ++i) {
         for (int j = 0; j <= 9; ++j) {
@@ -14,25 +14,25 @@ int main()
         }
     }
 
-    int combinations = 0;
+    int com = 0;
     for (int i = 0; i <= 9; ++i) {
         for (int j = 0; j <= 9; ++j) {
             for (int k = 0; k <= 9; ++k) {
                 if (i != j && j != k && i != k) {
-                    combinations++;
+                    com++;
                 }
             }
         }
     }
 
 
-    int timePerCombination = 3; 
-    int totalTime = combinations * timePerCombination;
+    int tcom = 3; 
+    int ttime = com * tcom;
 
-    cout << "Общее количество комбинаций: " << combinations << endl;
-    cout << "Время на открытие чемодана в худшем случае: " 
-              << totalTime / 60 << " минут " 
-              << totalTime % 60 << " секунд." << endl;
+    cout << "Общее количество комбинаций: " << com << endl;
+    cout << "худший вариант: " 
+              << ttime / 60 << " минут " 
+              << ttime % 60 << " секунд" << endl;
 
     return 0;
 }
