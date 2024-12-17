@@ -1,0 +1,28 @@
+#include <bits/stdc++.h> 
+using namespace std; 
+// Сортировка: 
+//Напишите функцию, которая принимает указатель на динамический массив целых чисел и его размер, и сортирует массив по возрастанию. 
+
+// функиция и указатель на массив 
+void Array(int*arr,int size){
+    if (size == 0){
+        return;
+    }
+
+int main() {
+    size = 5;
+    int* Array = int arr[size] {5, 3, 8, 1, 2};
+    cout << "Массив до сортировки: ";
+    for (i = 0; i < size; i++) {
+         cout << arr[i] << " ";
+    }
+    
+}
+    sort(Array, size);
+    cout << "Массив после сортировки: ";
+    for (i = 0; i < size; i++) {
+         cout << arr[i] << " ";
+    }
+
+    return 0 ;
+}
